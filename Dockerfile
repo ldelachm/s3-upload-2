@@ -22,4 +22,4 @@ RUN echo "AWS_SECRET_ACCESS_KEY exists: $([ -n "$AWS_SECRET_ACCESS_KEY" ] && ech
 RUN echo "AWS_SESSION_TOKEN exists: $([ -n "$AWS_SESSION_TOKEN" ] && echo 'YES' || echo 'NO')"
 RUN echo "AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION"
 
-RUN aws s3 cp requirements.txt s3://codebuild-dockerserver-artifacts-re/folder
+RUN aws s3 cp requirements.txt s3://codebuild-dockerserver-artifacts-re/folder/
