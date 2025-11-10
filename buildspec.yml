@@ -19,7 +19,7 @@ phases:
        - npm --version
        - docker info
        - aws sts get-caller-identity
-       - docker run --rm amazon/aws-cli sts get-caller-identity
+       # - docker run --rm amazon/aws-cli sts get-caller-identity
        # - docker run --rm -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION amazon/aws-cli sts get-caller-identity
        - docker build -t test:latest --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY --build-arg AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN --build-arg AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION .
 artifacts:
